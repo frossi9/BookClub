@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "All Posts here"}); %>
+
+<body>
+
+    <%- include("./partials/menu"); %>
+
+    <% for(let i = 0; i < posts.length; i++) { %>
+        <li><a href="/post?id=<%=posts[i].post_id%>"><%= posts[i].title %></a>
+        <h4> This post was created on: <%= posts[i].date %></h4>
+        <p> <%= posts[i].post %> </p>
+        <p> Questo lo trovi solo sulla pagina di Posts</p>
+        <p><a href="/author?id=<%=posts[i].author_id%>"> <%= posts[i].name %> </p>
+        </li>
+    <% } %>
+    <%- include("./partials/footer"); %>
+</body>
+</html>

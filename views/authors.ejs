@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "All authors"}); %>
+
+<body>
+
+    <%- include("./partials/menu"); %>
+    <h1> All Authors</h1>
+    <div id="scrollContent">
+    <ul id="authorsList">
+        <% for(let i = 0; i < authors.length; i++) { %>
+            <li><a href="/author?id=<%=authors[i].id%>"><%= authors[i].name %></a></li>
+        <% } %>
+    </ul>
+    </div>
+
+    <%- include("./partials/footer"); %>
+</body>
+</html>

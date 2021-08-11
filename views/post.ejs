@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("./partials/head", { title: "Post"}); %>
+
+<body>
+
+    <%- include("./partials/menu"); %>
+    
+    <h1 id="indexTitle"> More about this post.. </h1>
+    <div id="scrollContent"> 
+    <p><%= post.title %></p>
+    <p><%= post.post %></p> 
+    <p><%= post.date %></p>
+    </div>
+    
+    <%- include("./partials/footer"); %>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head", { title: "More about the Author"}); %>
+<body>
+
+<%- include("./partials/menu"); %>
+
+    <h1 id="indexTitle"> More about the author.. </h1>
+    <div id="scrollContent"> 
+    <p>The Id of this author is: <%= author.id %></p>
+    <p> Their name is <%= author.name %></p>
+    <p> <%= author.description %></p>    
+    </div>
+
+<%- include("./partials/footer"); %>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "Create new post"}); %>
+
+<body>
+
+    <%- include("./partials/menu"); %>
+    
+    <h1 id="indexTitle"> ..Add new post.. </h1>
+    <div id="scrollContent">
+    <!-- <form action="/new_author" method="POST" enctype="application/x-www-form-urlencoded"> -->
+    <form class="form" method="POST">
+        <input class="formElement" type="hidden" name="submitted" value="1">
+        <input class="formElement" type="text" name="title" placeholder="Title">
+        <br>
+        <textarea class="formElement" id="text" name="post" placeholder="Write your post here"></textarea>
+        <br>
+        <select class="formElement" name="author">
+            <option value="2">Martha</option>
+            <option value="3">Joe</option>
+        </select>
+        <br>
+        <button class="formElement" type="submit">Add New Post</button>
+    </form>
+    </div>
+    <%- include("./partials/footer"); %>
+</body>
+</html>

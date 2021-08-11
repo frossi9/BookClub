@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "Create a new author"}); %>
+
+<body>
+
+    <%- include("./partials/menu"); %>
+
+    <h1 id="indexTitle"> ..Add new author.. </h1>
+    <div id="scrollContent">
+    <!-- <form action="/new_author" method="POST" enctype="application/x-www-form-urlencoded"> -->
+    <form class="form" method="POST">
+        <input class="formElement" type="hidden" name="submitted" value="1">
+        <input class="formElement" type="text" name="name" placeholder="Author Name">
+        <br>
+        <textarea class="formElement" id="text" name="description" placeholder="Description"></textarea>
+        <br>
+        <button class="formElement" type="submit">Add New Author</button>
+    </form>
+    </div>
+<%- include("./partials/footer"); %>
+</body>
+</html>
